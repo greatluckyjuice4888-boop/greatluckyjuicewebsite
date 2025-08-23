@@ -97,7 +97,34 @@
       background: #25d366;
       color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 600;/* === HERO (Top Banner) === */
+.hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1528821154947-1aa3d1f1c4f3?q=80&w=1400&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 70px 20px;
+  margin: 0;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,0.45);
+}
+.hero .inner{
+  position: relative; 
+  max-width: 1000px; 
+  margin: 0 auto;
+  text-align: center;
+}
+.hero h1{ margin: 0 0 8px; font-size: 2rem; }
+.hero p{ margin: 6px 0 20px; font-size: 1.1rem; opacity: .95; }
+.btn-row{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.btn{ display:inline-block; padding:10px 16px; border-radius:8px;
+  background:#25d366; color:#fff; text-decoration:none; font-weight:600; }
+.btn.alt{ background:#ff6600; }
+.btn.dark{ background:#333; }
     }
   </style>
 </head>
@@ -106,7 +133,20 @@
   <header>
     <h1>Great Lucky Juice Centre &reg;</h1>
     <p>Fresh • Healthy • Delicious</p>
-  </header>
+  </header><section class="hero">
+  <div class="inner">
+    <h1>Great Lucky Juice Centre ®</h1>
+    <p>Fresh • Healthy • Delicious</p>
+
+    <div class="btn-row">
+      <a href="#menu" class="btn alt">View Menu</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=near%20Jammu%20and%20Kashmir%20Bank%20Opp.%20Paithan%20Gate%20Aurangabad%20431001" 
+         target="_blank" rel="noopener" class="btn dark">Get Directions</a>
+      <a href="tel:+919970123235" class="btn dark">Call Now</a>
+      <a href="https://wa.me/919970123235" target="_blank" class="btn">Chat on WhatsApp</a>
+    </div>
+  </div>
+  </section>
 
   <section id="about">
     <h2>About Us</h2>
